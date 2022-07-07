@@ -8,7 +8,8 @@ function Game() {
 
   //Declaring a Winner
   useEffect(() => {
-    "Your code here";
+    const newWinner = calculateWinner(squares);
+    setWinner(newWinner);
   }, [squares]);
 
   //function to check if a player has won.
@@ -51,7 +52,8 @@ function Game() {
 
   //Restart game
   const handlRestart = () => {
-    "Your code here";
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
   };
 
   return (
