@@ -41,7 +41,7 @@ function Game() {
 
   //Handle player
   const handleClick = (i) => {
-    const newSquare = square.slice();
+    const newSquare = squares.slice();
     if (calculateWinner(newSquare) || newSquare[i]) {
       return; 
     } newSquare[i] = xIsNext ? "X" : "O";
@@ -51,7 +51,7 @@ function Game() {
   };
 
   //Restart game
-  const handlRestart = () => {
+  const handleRestart = () => {
     setSquares(Array(9).fill(null));
     setXIsNext(true);
   };
